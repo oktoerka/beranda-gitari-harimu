@@ -83,6 +83,40 @@ body {
     display: none;
 }
 
+/* navbar pencarian */
+.navbar .search-from {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #ffffff;
+    width: 30rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 200ms;
+}
+
+.navbar .search-from.active {
+    transform: scaleY(1);
+}
+
+.navbar .search-from input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--wr2);
+    padding: 1rem;
+}
+
+.navbar .search-from label {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+    color: var(--wr2);
+}
+
 /* ++++++++++Hero Section */
 
 .hero {
@@ -222,25 +256,77 @@ body {
     line-height: 1.5;
 }
 
-.menu .row {
+.menu .gbr {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5rem;
     justify-content: center;
 }
 
-.menu .row .menu-card {
+.menu .gbr .menu-card {
     text-align: center;
     padding-bottom: 4rem;
 }
 
-.menu .row .menu-card img {
+.menu .gbr .menu-card a {
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .gbr .menu-card a:hover {
+    background-color: var(--wr3);
+}
+
+.menu .gbr .menu-card img {
     border-radius: 50%;
     width: 80%;
 }
 
-.menu .row .menu-card .mct {
+.menu .gbr .menu-card .mct {
     margin: 1rem auto 0.75rem;
+}
+
+.menu .lnk {
+    margin: 0.2rem auto;
+    display: block;
+    width: fit-content;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--wr3);
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+/* ++++++++++EFEK KILAP */
+.menu .lnk::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(251, 255, 0, 0.5),
+        transparent
+    );
+
+    transition: 0.5s;
+}
+
+.menu .lnk:hover::before {
+    left: 100%;
 }
 
 /* ++++++++++KONTAK */
@@ -329,6 +415,79 @@ footer .kredit a {
     font-weight: 700;
 }
 
+/* ++++++++++MODAL BOX */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-container {
+    position: relative;
+    background-color: #fefefe;
+    color: var(--wr2);
+    margin: 15% auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    animation: animateModal 0.5s;
+}
+
+/* ++++++++++modal animation */
+@keyframes animateModal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.modal-container {
+    height: auto;
+    overflow: hidden;
+}
+
+.modal-container .tutup-icon {
+    position: absolute;
+    right: 1rem;
+}
+
+.modal-konten {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.modal-konten img {
+    height: 15rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modal-konten p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-top: 1.2rem;
+}
+
+.modal-konten a {
+    display: flex;
+    gap: 1rem;
+    width: 14rem;
+    background-color: var(--wr1);
+    color: #fff;
+    margin-top: 1rem;
+    padding: 1rem 1.6rem;
+}
+
 /* ++++++++++MEDIA QUERIES++++++++++ */
 
 /* laptop */
@@ -379,6 +538,11 @@ footer .kredit a {
         transform: scaleX(0.2);
     }
 
+    .navbar .search-from {
+        width: 90%;
+        right: 2rem;
+    }
+
     .tentang .gbr {
         flex-wrap: wrap;
     }
@@ -416,6 +580,10 @@ footer .kredit a {
 
     .kontak .gbr form {
         padding-top: 0;
+    }
+
+    .modal-konten {
+        flex-wrap: wrap;
     }
     
 }

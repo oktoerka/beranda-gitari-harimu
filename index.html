@@ -28,10 +28,18 @@
         </div>
 
         <div class="icons">
-            <a href="#" id="search"><i data-feather="search"></i></a>
-            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="search-bttn"><i data-feather="search"></i></a>
+            <a href="https://shopee.co.id" target="_blank" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
+
+        <!-- SEARCHING -->
+        <div class="search-from">
+            <input type="search" id="search-box" placeholder="Cari...">
+            <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+        <!-- end SEARCHING -->
+
     </nav>
 
     <!-- Hero Section -->
@@ -39,7 +47,7 @@
         <main class="hero-content">
             <h1>Dunia Gitar<br>Dalam Genggamanmu</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, autem?</p>
-            <a href="#menu" class="cta">Lihat Sekarang</a>
+            <a href="#menu" class="cta">Lihat Produk</a>
         </main>
     </section>
 
@@ -52,7 +60,7 @@
                 <img src="img/guitar01.jpg" alt="Tentang Kami">
             </div>
             <div class="content">
-                <h3>Pilih yang Nggak Milih</h3>
+                <h3>Lorem ipsum dolor sit.</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis adipisci cumque, dolores quibusdam fuga!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, deserunt!</p>
             </div>
@@ -60,40 +68,53 @@
     </section>
     <!-- end TENTANG -->
 
-    <!-- MENU -->
+    <!-- PRODUK -->
     <section id="menu" class="menu">
         <h2><span>Pro</span>duk</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit in deserunt aperiam mollitia possimus delectus!</p>
-       
-        <div class="row">             
+
+        <div class="gbr">
             <div class="menu-card">
                 <img src="img/menu/gitar-akustik.jpg" alt="Gitar Listrik" class="mci">
                 <h3 class="mct">Gitar Akustik</h3>
                 <p class="mcd">IDR 500-2000K</p>
+                <a href="#" class="bttn-mata"><i data-feather="eye"></i></a>
             </div>           
+            <!-- ---------------------------------- -->
             <div class="menu-card">
                 <img src="img/menu/senar.jpg" alt="Gitar Listrik" class="mci">
                 <h3 class="mct">Senar Gitar</h3>
                 <p class="mcd">IDR 15-200K</p>
+                <a href="#" class="bttn-mata"><i data-feather="eye"></i></a>
             </div>          
+            <!-- ---------------------------------- -->
             <div class="menu-card">
                 <img src="img/menu/gitar-listrik.jpg" alt="Gitar Listrik" class="mci">
                 <h3 class="mct">Gitar Listrik</h3>
                 <p class="mcd">IDR 1200-5000K</p>
+                <a href="#" class="bttn-mata"><i data-feather="eye"></i></a>
             </div>
+            <!-- ---------------------------------- -->
             <div class="menu-card">
                 <img src="img/menu/pick-up.jpg" alt="Gitar Listrik" class="mci">
                 <h3 class="mct">Pick Up Gitar</h3>
                 <p class="mcd">IDR 150-1000K</p>
+                <a href="#" class="bttn-mata"><i data-feather="eye"></i></a>
             </div>
+            <!-- ---------------------------------- -->
             <div class="menu-card">
                 <img src="img/menu/pick-gitar.jpg" alt="Gitar Listrik" class="mci">
                 <h3 class="mct">Pick Gitar</h3>
                 <p class="mcd">IDR 2K</p>
+                <a href="#" class="bttn-mata"><i data-feather="eye"></i></a>
             </div>
         </div>
+        <a href="https://shopee.co.id" target="_blank" class="lnk">Belanja</a>
+
     </section>
     <!-- end MENU -->
+
+
 
     <!-- KONTAK -->
      <section id="kontak" class="kontak">
@@ -102,7 +123,7 @@
         <div class="gbr">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042786.082122783!2d109.60535388910088!3d0.05372029347379958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fdf9eae9bde33d%3A0x6a43959c316aad0!2sKabupaten%20Sekadau%2C%20Kalimantan%20Barat!5e0!3m2!1sid!2sid!4v1777910037762!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
             
-            <form action="">
+            <form action="#">
                 <div class="input-group">
                     <i data-feather="user"></i>
                     <input type="text"
@@ -146,6 +167,21 @@
             <p>Created by <a href="">oktoerka2</a> | &copy; 2026.</p>
         </div>
     </footer>
+
+    <!-- modal box item -->
+    <div class="modal" id="item-detail-modal">
+        <div class="modal-container">
+            <a href="#" class="tutup-icon"><i data-feather="x"></i></a>
+            <div class="modal-konten">
+                <img src="img/guitar01.jpg" alt="Gitar Akustik">
+                <div class="product-konten">
+                    <h3>Gitar Akustik</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dicta.</p>
+                    <a href="https://shopee.co.id" target="_blank"><i data-feather="shopping-cart"></i> <span>Menuju Shopee</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- feather icon -->
     <script>
